@@ -1,0 +1,7 @@
+POST http://localhost:8080/Router/POST
+content-type: application/json
+
+{
+"ItemName":"1111111",
+"GST":88888
+}
