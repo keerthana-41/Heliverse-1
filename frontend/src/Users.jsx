@@ -1,16 +1,16 @@
 import React from "react";
-import Read from './Users/Read'
-import Delete from './Users/Delete'
+// import Read from './Users/Read'
+// import Delete from './Users/Delete'
 import Insert from './Users/Insert'
-import Update from './Users/Update'
+// import Update from './Users/Update'
 
-const Users = ()=> {
-    return(
+const Users = () => {
+    return (
         <>
-         {/* <Read></Read> */}
-         {/* <Delete></Delete> */}
-         <Insert></Insert>
-         {/* <Update></Update> */}
+            {/* <Read></Read> */}
+            {/* <Delete></Delete> */}
+            <Insert />
+            {/* <Update></Update> */}
         </>
     )
 }
