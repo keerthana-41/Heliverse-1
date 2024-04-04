@@ -4,9 +4,20 @@ let PORT = 8000;
 let cors = require('cors');
 let bodyparser = require("body-parser");
 let Router = require("./Router/Router");
+let DotEnv = require("dotenv")
+let mongoose = require("mongoose");
 
 app.use(cors());
 app.use(bodyparser.json());
+DotEnv.config();
+
+mongoose.connect(process.env.MONGO_URL)
+.then(()=>console.log("Mongoose connected successfully "))
+.catch((error)=>console.log(error))
+
+
+
+
 app.use('/Router', Router);
 
 app.get('/', (req, res) => {
