@@ -1,7 +1,10 @@
-POST http://localhost:8080/Router/POST
+POST http://localhost:8000/Router/POST
 content-type: application/json
 
 {
-"ItemName":"1111111",
-"GST":88888
+"firstName":"Sree",
+"lastName":"K",
+"email":"sri.vasu215@gmail.com",
+"password":"sri123",
+"gender":"male"
 }

@@ -1,12 +1,9 @@
 let express = require("express");
 let router = express.Router();
+let LocalPost = require("../Controllers/Users")
 
 
-router.post('/', (req, res) => {
-    let LocalBody = req.body;
-
-    res.json(LocalBody);
-});
+router.post('/', LocalPost.LocalUserFunc);
 
 
 
