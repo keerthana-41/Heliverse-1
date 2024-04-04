@@ -18,7 +18,7 @@ mongoose.connect(process.env.MONGO_URL)
 
 
 
-app.use('/Router', Router);
+app.use('/Api', Router);
 
 app.get('/', (req, res) => {
     res.send("Hello world")

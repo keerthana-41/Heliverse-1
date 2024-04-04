@@ -1,0 +1,10 @@
+POST http://localhost:8000/Api/User
+content-type: application/json
+
+{
+"firstName":"Raj",
+"lastName":"S",
+"email":"raj.vasu215@gmail.com",
+"password":"raj123",
+"gender":"male"
+}

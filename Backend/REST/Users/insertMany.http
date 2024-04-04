@@ -1,0 +1,19 @@
+POST http://localhost:8000/Api/User/Many
+content-type: application/json
+
+[
+    {
+"firstName":"Raj",
+"lastName":"S",
+"email":"raj.vasu215@gmail.com",
+"password":"raj123",
+"gender":"male"
+},
+{
+"firstName":"Raj",
+"lastName":"S",
+"email":"raj.vasu215@gmail.com",
+"password":"raj123",
+"gender":"male"
+}
+]

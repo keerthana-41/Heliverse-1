@@ -1,11 +1,9 @@
 let express = require("express");
 let router = express.Router();
 
-let LocalPost = require('./POST');
-let LocalGet = require('./GET');
+let LocalUser = require('./Users/Methods');
 
-router.use('/POST', LocalPost);
-router.use('/GET', LocalGet);
+router.use('/User', LocalUser);
 
 
 
