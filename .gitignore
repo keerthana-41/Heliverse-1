@@ -1,2 +1,13 @@
 .env
-/Backend/node_modules
+Backend/node_modules/
+node_modules/
+
+bin/
+
+KData/
+
+.env
+
+.vscode
+
+.log
