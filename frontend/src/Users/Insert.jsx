@@ -12,14 +12,17 @@ let Insert = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         console.log(LocalObj);
+        console.log("LocalObj::", LocalObj);
 
-        const response = await fetch('/api/todos', {
+        const response = await fetch('http://localhost:8000/Api/User', {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json',
+                'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ text: newTodo }),
-          });
+            body: JSON.stringify(LocalObj),
+        });
+        let LocalReturnData = await response.json();
+        console.log("LocalReturnData::", LocalReturnData);
         // Do something with the form data
     };
 

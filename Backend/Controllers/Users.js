@@ -2,6 +2,7 @@ const User = require('../Module/Users');
 
 // Create
 let insertOneFunc = async (req, res) => {
+    console.log("kkk::",res.body);
     try {
         const newUser = await User.create(req.body);
         res.status(201).json(newUser);
