@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom'
 
 let Insert = () => {
     const [firstName, setFirstName] = useState("");
@@ -7,10 +8,13 @@ let Insert = () => {
     const [password, setPassword] = useState("");
     const [gender, setGender] = useState(""); // Default value set to Male
 
+    const navigate = useNavigate()
+
     let LocalObj = { firstName, lastName, email, password, gender };
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+
         console.log(LocalObj);
         console.log("LocalObj::", LocalObj);
 
@@ -22,8 +26,9 @@ let Insert = () => {
             body: JSON.stringify(LocalObj),
         });
         let LocalReturnData = await response.json();
-        console.log("LocalReturnData::", LocalReturnData);
-        // Do something with the form data
+        if (Object.keys(LocalReturnData).length > 1) {
+            navigate('/')
+        }
     };
 
     return (
@@ -59,6 +64,7 @@ let Insert = () => {
                 <div className="col-md-6">
                     <label htmlFor="validationCustom05" className="form-label">Gender</label>
                     <select className="form-select" name="gender" onChange={(e) => setGender(e.target.value)} aria-label="Default select example">
+                        <option >select</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                     </select>
